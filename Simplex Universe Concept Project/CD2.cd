@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="We may want to think of some way of applying fields to each point in space to incorperate electrodynamics and some future quantum interactions.&#xD;&#xA;https://en.wikipedia.org/wiki/Field_(physics)">
+    <Position X="11.025" Y="3.767" Height="0.896" Width="5.231" />
+  </Comment>
+  <Comment CommentText="In our simulation, particles may ONLY interact with other particles under the SAME PARENT. Because of this, each particle can be thought as its own universe with a grid size equal to the size of that particle. Therefore, positions of sub-particles are only calculated RELATIVE to the center of the parent. If the particle leaves the radius of its parent, it is re-positioned into another appropriate parent OR if possible made into a free-standing parent in the above level. This allows several close masses to be treated as single objects to far away masses.">
+    <Position X="0.5" Y="1.531" Height="1.634" Width="3.804" />
+  </Comment>
+  <Comment CommentText="NOTE: When a particle absorbs a child, the positioning of that child within the parent is determined by the PARENT upon the inspection of the new child's exit policy.">
+    <Position X="3.233" Y="6.939" Height="0.75" Width="3.533" />
+  </Comment>
+  <Comment CommentText="ROTATION:&#xD;&#xA;We can accurately simulate rotation by pretending that the particle is actually at the edge of its radius rather than center when calculating the force of that particle on OTHER particles. We will NOT store this in a rotation class to clean up the particle itself BECAUSE we need to know the size and other properties.&#xD;&#xA;&#xD;&#xA;THIS MAY BE WRONG! Leave rotation for sub-particles!">
+    <Position X="0.5" Y="3.26" Height="1.375" Width="3.794" />
+  </Comment>
+  <Comment CommentText="3D Coordinate Space Notes:&#xD;&#xA;USE THE AXIS CONFIGURATION FROM WIKIPEDIA!!">
+    <Position X="27.343" Y="8.354" Height="1.771" Width="4.596" />
+  </Comment>
+  <Class Name="SimplexUniverse.MainForm" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>qqmCwv3S1nCBjgViIsSQM6MK0wSJWAEQKkeY8EPiDQE=</HashCode>
+      <FileName>Forms\MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Math.SimMath">
+    <Position X="14" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAIQAAAA4CAAAAgEAAgAAASAAAAkAAAABAAAAAAAA=</HashCode>
+      <FileName>Classes\Math\SimMath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Math.Vector">
+    <Position X="0.5" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAQCAAAAAAQIAAAHYC2AQgCAAAAIAAQUAAAAAAEQByA=</HashCode>
+      <FileName>Classes\Math\Vector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.Particle">
+    <Position X="4.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>DAEIAIEAAAAAAAIgIBAAQAAAAEEAICSIAABEAAAGEAA=</HashCode>
+      <FileName>Classes\Physics\Particles\Particle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Math.ComplexNumber">
+    <Position X="0.5" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAEAAAAAAAAAACAAQAAAAA=</HashCode>
+      <FileName>Classes\Math\ComplexNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.Universe">
+    <Position X="11" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAgIAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Classes\Physics\Universe\Universe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.IO.Serialization">
+    <Position X="14" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAEAAAAAAAAAAAAACAAEAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Classes\IO\Serialization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.PhysicsConstants">
+    <Position X="16.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAgAAAwAAAAAACACAAIAAAACABAAAABIAAAAEA=</HashCode>
+      <FileName>Classes\Math\PhysicsConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Math.Tensor">
+    <Position X="5" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABIAIZAAAAAGAACAgAEAAAAIAAABGAAiFAAAgAAAA=</HashCode>
+      <FileName>Classes\Math\Tensor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.VisualizationComponents.VisualizationGrid">
+    <Position X="19.5" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgMMACBJgIUAKACCQQABBhVCITAKIgAQAQBhSNA=</HashCode>
+      <FileName>Classes\Visualization\VisualizationGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.VisualizationComponents.VG_Series">
+    <Position X="22.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAgAAAAAAYAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Classes\Visualization\VG_Series.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.VisualizationComponents.VG_Point">
+    <Position X="25.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Visualization\VG_Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.VisualizationComponents.VG_ChartArea">
+    <Position X="25.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Classes\Visualization\VG_ChartArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Math.Matrix">
+    <Position X="10" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>YABgAAAAAgAAAAAAYAEAoAACAgAAAAAEAAANAQAAAAE=</HashCode>
+      <FileName>Classes\Math\Matrix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Math.Orientation3D">
+    <Position X="12.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Classes\Math\Orientation3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.VisualizationComponents.PlotVector">
+    <Position X="25.25" Y="10.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Visualization\PlotVector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.PropertyType">
+    <Position X="7.25" Y="2.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAQAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Physics\Particles\Particle Properties\PropertyType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Math.ValidRangeCondition">
+    <Position X="7.25" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAACAAAAAAFgAAAAAQAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Math\ValidRangeCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.ParticleProperty">
+    <Position X="7.25" Y="5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Classes\Physics\Particles\Particle Properties\ParticleProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Simulations.Simulation">
+    <Position X="16.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQgAgQAACAAAAAAAAAAQAAAAIAAAAAIJIEQAAgAAQA=</HashCode>
+      <FileName>Classes\Simulation\Simulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.VisualizationComponents.VG_PointWatchSeries">
+    <Position X="22.5" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAFAAAABAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Classes\Visualization\VG_PointWatchSeries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.VisualizationComponents.VG_PWPoint">
+    <Position X="22.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Visualization\VG_PWPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Math.FlatTensor">
+    <Position X="7.25" Y="10.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABQAAAAAAAAAAAAAAAAAAgAAgACAAAAAIgAAAACAA=</HashCode>
+      <FileName>Classes\Math\FlatTensor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Simulations.SimulationParameters">
+    <Position X="24" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAIgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Simulation\SimulationParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.UpdateScript">
+    <Position X="21" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\UpdateScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.ParticleInteractionScript">
+    <Position X="29" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\ParticleInteractionScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.InteractionScripts">
+    <Position X="24.25" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\InteractionScripts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.InteractionScript">
+    <Position X="29.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\InteractionScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.FieldInteractionScript">
+    <Position X="32.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\FieldInteractionScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.ScriptCompiler">
+    <Position X="35.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAAAAAABAAAAAIEAgBAAAAA=</HashCode>
+      <FileName>Classes\Scripting\ScriptCompiler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.IO.LoadAssets">
+    <Position X="26.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Classes\IO\LoadAssets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.BoundaryScript">
+    <Position X="35.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\BoundaryScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.SimplexScript">
+    <Position X="38" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAgAAAAAAAEAAQAAAAAAEAAAAAACAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\SimplexScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.SeedScript">
+    <Position X="32.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\SeedScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Scripting.ScriptCollection">
+    <Position X="26.25" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Scripting\ScriptCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.PhysicsParticles">
+    <Position X="29.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAACAgAAAAAAAAAAAACCQAAAAAAIACAAA=</HashCode>
+      <FileName>Classes\Physics\Particles\PhysicsParticles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.PhysicsParticleProperties">
+    <Position X="32.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgAAAKQAAA=</HashCode>
+      <FileName>Classes\Physics\Particles\Particle Properties\PhysicsParticleProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.Field&lt;ValueType&gt;">
+    <Position X="21.5" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAAAAAAAAAAAAACAAAAAAAAAAABAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Classes\Physics\Fields\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.Simplex">
+    <Position X="19.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAggAAAAAAAAAQAAAABAAIAAAAAAAAAEAA=</HashCode>
+      <FileName>Classes\Physics\Simplex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.Wave">
+    <Position X="19.5" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Physics\Waves\Wave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Physics.UniverseBoundary">
+    <Position X="10.75" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACIAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Physics\Universe\UniverseBoundary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.VisualizationComponents.TimeGraph">
+    <Position X="33" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Visualization\TimeGraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.SimplexProperty">
+    <Position X="13" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Physics\SimplexProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Drawing.MetroMenu">
+    <Position X="15.5" Y="10" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAgAAEAEAAAAAAAAAAAAAAAEAAAAAAAEAAAAA=</HashCode>
+      <FileName>Classes\Drawing\MetroMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Simulations.SimpleBufferedSimulation">
+    <Position X="38" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SimpleBufferedSimulation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplexUniverse.Simulations.MicroTimer">
+    <Position X="35.25" Y="6" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="SimplexUniverse.Simulations.MicroTimer.MicroTimerElapsedEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MicroTimer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AARIAAEAACBAAKAEAIAAACAEAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>MicroTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SimplexUniverse.Math.Enums.Vector_StringFormat" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Enums\VectorStringFormat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
