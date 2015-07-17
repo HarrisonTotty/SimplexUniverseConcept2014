@@ -18,3 +18,5 @@ To run start one of the built-in visualizations, exit out of the welcome form an
 * Welcome Form
 * Simulation Buffering
 
+## MEDIA
+To see a youtube video of the demo in action, follow [this link!](https://youtu.be/yT8UffjyXdU "Simplex Universe Concept Build - Feb 2015")
