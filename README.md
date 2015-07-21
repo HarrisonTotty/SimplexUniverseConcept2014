@@ -7,8 +7,19 @@ This project depends on the [Metro Modern UI](https://github.com/viperneo/winfor
 ## HOW TO RUN
 To run start one of the built-in visualizations, exit out of the welcome form and from the main menu strip select one of the options under the "Debug" menu. This will load one of the simulations. You can then select "Simulation > Start" from the main menu to start the simulation. Clicking and dragging the mouse will move the camera around the center of the simulation (you can also use the arrow keys). The mouse wheel (or + and - keys) will zoom the simulation in and out. You can still rotate and zoom the simulation while it is paused. There are plenty of other hidden features as well.
 
+## CONTROLS
+* **t** - Toggle Particle Trails
+* **p** - Toggle Point Mode
+* **[/]** - Increase/Decrease Universe Boundary Size
+* **g** - Toggle Gridlines (in 2D mode)
+* **a** - Toggle Axes (in 2D mode)
+* **+/-** - Zoom In/Out
+* **SPACE** - Pause/Resume Simulation
+* **Arrow Keys** - Rotate Simulation
+
 ## WORKING FEATURES
 * C# Scripting
+* Parallel Computation
 * 2D/3D Visualization
 * Particle Trails
 * Themes
@@ -20,6 +31,8 @@ To run start one of the built-in visualizations, exit out of the welcome form an
 * Particle Editor
 * Welcome Form
 * Simulation Buffering
+* Saving/Loading Simulations
+* Seeding
 
 ## MEDIA
 To see a youtube video of the demo in action, follow [this link!](https://youtu.be/yT8UffjyXdU "Simplex Universe Concept Build - Feb 2015")
