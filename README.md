@@ -1,5 +1,5 @@
 # Simplex Universe Concept Project
-A working concept demo for my Simplex Universe project written in C#. The following code is origional code for Simplex Universe as it was around December of 2014. This is before the mathematics and physics libraries became seperate projects. Note that many features do not yet work and the code for this version of the project can be rather ugly in some places. Note also that the beautiful UI of this program is largly thanks to the [Metro Modern UI](https://github.com/viperneo/winforms-modernui "viperneo/winforms-modernui GitHub Page") project.
+A working concept demo for my Simplex Universe project written in C#. The following code is origional code for Simplex Universe as it was around December of 2014. This is before the mathematics and physics libraries became seperate projects. Note that many features do not yet work and the code for this version of the project can be rather ugly in some places. Note also that the beautiful UI of this program is largly thanks to the [Metro Modern UI](https://github.com/viperneo/winforms-modernui "viperneo/winforms-modernui GitHub Page") project. To see a youtube video of the demo in action, follow [this link!](https://youtu.be/yT8UffjyXdU "Simplex Universe Concept Build - Feb 2015")
 
 ## COMPILING
 This project depends on the [Metro Modern UI](https://github.com/viperneo/winforms-modernui "viperneo/winforms-modernui GitHub Page") NuGet packages, which may need to be added to the project before compiling. Other than that, you shouldn't have any problems compiling the source code (within Visual Studio). If you don't want to compile your own executable, you can find one that I compiled myself in the "Simplex Universe Concept Project - Compiled x86_64.zip" file.
@@ -33,6 +33,3 @@ To run start one of the built-in visualizations, exit out of the welcome form an
 * Simulation Buffering
 * Saving/Loading Simulations
 * Seeding
-
-## MEDIA
-To see a youtube video of the demo in action, follow [this link!](https://youtu.be/yT8UffjyXdU "Simplex Universe Concept Build - Feb 2015")
