@@ -34,3 +34,4 @@ To run start one of the built-in visualizations, exit out of the welcome form an
 * Saving/Loading Simulations
 * Seeding
 * Time Graphs
+* Simulation Parameters (live editing)
