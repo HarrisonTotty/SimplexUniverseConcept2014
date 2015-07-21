@@ -33,3 +33,4 @@ To run start one of the built-in visualizations, exit out of the welcome form an
 * Simulation Buffering
 * Saving/Loading Simulations
 * Seeding
+* Time Graphs
